@@ -1,12 +1,12 @@
-Package: nhsbsaShinyR
-Title: An Amazing Shiny App
+Package: mongo2shiny
+Title: Shiny Dashboard Template With MongoDB Connection
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
+    person(given = "Mark",
+           family = "McPherson",
            role = c("aut", "cre"),
-           email = "your@email.com")
-Description: What the package does (one paragraph).
+           email = "mark.mcpherson1@nhs.net")
+Description: A template to use as a starting point for integrating mongoDB into a Shiny dashboard.
 License: Apache License (>= 2)
 Imports: 
     config (>= 0.3.1),
@@ -15,9 +15,9 @@ Imports:
     markdown,
     highcharter
 Remotes:
-    github::nhsbsa-data-analytics/nhsbsaR
+    github::MarkMc1089/mongo2shiny
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Depends: 
     R (>= 2.10)
