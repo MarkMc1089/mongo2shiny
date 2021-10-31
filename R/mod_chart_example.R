@@ -26,13 +26,15 @@ mod_chart_example_ui <- function(id) {
 #' chart_example Server Function
 #'
 #' @noRd
+#' 
+#' @importFrom graphics hist
 mod_chart_example_server <- function(input, output, session) {
   ns <- session$ns
 
   output$chart <- highcharter::renderHighchart({
 
     # Generate bins based on input$bins from ui.R
-    x <- nhsbsaShinyR::faithful[, 2]
+    x <- mongo2shiny::faithful[, 2]
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
 
     # Draw the histogram with the specified number of bins

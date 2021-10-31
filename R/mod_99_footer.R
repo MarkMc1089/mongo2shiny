@@ -33,7 +33,7 @@ mod_99_footer_ui <- function(id) {
             a(
               style = "color: #768692;",
               "GitHub",
-              href = "https://github.com/nhsbsa-data-analytics/nhsbsaShinyR",
+              href = "https://github.com/MarkMc1089/mongo2shiny",
               target = "_blank"
             ),
             "."
@@ -42,7 +42,7 @@ mod_99_footer_ui <- function(id) {
         column(
           width = 3,
           align = "right",
-          p("© APLv2")
+          p("&#169; APLv2")
         )
       )
     )
