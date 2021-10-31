@@ -1,6 +1,10 @@
-# NHSBSA R Shiny template
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
 
-This R package has been developed by NHS Business Services Authority Data Analytics Learning Lab to use as a template for building NHSBSA branded R `{shiny}` dashboards. 
+# A template to use as a starting point for integrating mongoDB into a Shiny dashboard.
+
+This R package is based on a template developed by NHS Business Services Authority Data Analytics Learning Lab to use as a template for building NHSBSA branded R `{shiny}` dashboards. 
 
 ## Features
 

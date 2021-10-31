@@ -19,13 +19,13 @@
 ## to change the name in the app_sys() function in app_config.R /!\
 ## 
 golem::fill_desc(
-  pkg_name = "nhsbsaShinyR", # The Name of the package containing the App 
-  pkg_title = "PKG_TITLE", # The Title of the package containing the App 
-  pkg_description = "PKG_DESC.", # The Description of the package containing the App 
-  author_first_name = "AUTHOR_FIRST", # Your First Name
-  author_last_name = "AUTHOR_LAST", # Your Last Name
-  author_email = "AUTHOR@MAIL.COM", # Your Email
-  repo_url = NULL # The URL of the GitHub Repo (optional) 
+  pkg_name = "mongo2shiny", # The Name of the package containing the App 
+  pkg_title = "Shiny Dashboard Template With MongoDB Connection", # The Title of the package containing the App 
+  pkg_description = "A template to use as a starting point for integrating mongoDB into a Shiny dashboard.", # The Description of the package containing the App 
+  author_first_name = "Mark", # Your First Name
+  author_last_name = "McPherson", # Your Last Name
+  author_email = "mark.mcpherson1@nhs.net", # Your Email
+  repo_url = "https://github.com/MarkMc1089/mongo2shiny" # The URL of the GitHub Repo (optional) 
 )     
 
 ## Set {golem} options ----
@@ -33,11 +33,11 @@ golem::set_golem_options()
 
 ## Create Common Files ----
 ## See ?usethis for more information
-usethis::use_apache_license( "NHS BSA" )  # You can set another license here
-usethis::use_readme_rmd( open = FALSE )
-usethis::use_code_of_conduct()
+usethis::use_apache_license()  # You can set another license here
+#usethis::use_readme_rmd( open = FALSE )
+#usethis::use_code_of_conduct()
 usethis::use_lifecycle_badge( "Experimental" )
-usethis::use_news_md( open = FALSE )
+#usethis::use_news_md( open = FALSE )
 
 ## Use git ----
 usethis::use_git()
