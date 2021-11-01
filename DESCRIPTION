@@ -9,12 +9,13 @@ Imports:
     golem (>= 0.3.1),
     shiny (>= 1.6.0),
     markdown (>= 1.1),
-    highcharter (0.8.2),
+    highcharter (>= 0.8.2),
     magrittr (>= 2.0.1),
     rlang (>= 0.4.11),
-    nhsbsaR
-Remotes:
-    github::MarkMc1089/mongo2shiny
+    nhsbsaR (>= 0.0.0.9000),
+    pkgload (>= 1.2.3)
+Additional_repositories: 
+    https://MarkMc1089.github.io/drat
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2

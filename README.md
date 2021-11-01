@@ -15,7 +15,7 @@ We have used the `{golem}` framework to develop this taking inspiration from:
 
 It includes two dummy modules demonstrating using either markdown or `{highcharter}` with an NHSBSA theme applied. 
 
-Also included is a sample `data-raw/` script. Much of the data used in NHSBSA dashboards can be sensitive, so the `data/` directory is included in the `.gitignore` (you can change this if there is nothing sensitive) and this means you must run all the `data-raw/` scripts to produce the `data/` files after cloning.
+Also included is a sample `data-raw/` script. Since much of the data used in NHSBSA dashboards can be sensitive, the `data/` directory can be included in the `.gitignore` (you can change this if some sensitive data is included) and this means you must run all the `data-raw/` scripts to produce the `data/` files after cloning.
 
 There is also a github action to check that code conforms to tidyverse linting.
 
@@ -27,7 +27,7 @@ The package is structured as follows:
 nhsbsaShinyR
 ├── .github                                 # Workflows for github actions
 ├── R                                       # R code for the dashboard
-│   ├── _disable_auotload.R                 # Golem file
+│   ├── _disable_autoload.R                 # Golem file
 │   ├── app_config.R                        # Golem file
 │   ├── app_server.R                        # Server component
 │   ├── app_ui.R                            # UI component
@@ -37,7 +37,7 @@ nhsbsaShinyR
 │   ├── utils_helpers.R                     # Custom NHSBSA highcharter theme
 │   └── utils-pipe.R                        # %>% operator
 ├── data-raw                                # Various scripts to produce `data` files
-├── data                                    # Data for the dashboard (accessible via nhsbsaShinyR::{name})
+├── data                                    # Data for the dashboard (accessible via mongo2shiny::{name})
 ├── dev                                     # Golem files
 │   ├── 01_start.R                          # Golem file (use to set up golem framework)
 │   ├── 02_dev.R                            # Golem file (use to develop package)
@@ -58,5 +58,5 @@ nhsbsaShinyR
 ├── NAMESPACE                               # Automatically generated documentation by roxygen2
 ├── README.md                               # Brief overview of the package
 ├── app.R                                   # Golem file
-├── nhsbsaShinyR.Rproj                      # R Project file
+├── mongo2shiny.Rproj                       # R Project file
 ```
