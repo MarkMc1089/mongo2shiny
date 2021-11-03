@@ -13,7 +13,10 @@ app_ui <- function(request) {
     br(),
     fluidPage(
       mod_markdown_example_ui("markdown_example_1"),
-      mod_chart_example_ui("chart_example_1")
+      br(),
+      mod_chart_example_ui("chart_example_1"),
+      br(),
+      mod_table_from_mongo_example_ui("table_example_1")
     ),
     br(),
     mod_99_footer_ui("99_footer_1")
