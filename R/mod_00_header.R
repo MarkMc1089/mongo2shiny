@@ -32,8 +32,8 @@ mod_00_header_ui <- function(id) {
 #' 00_header Server Function
 #'
 #' @noRd
-mod_00_header_server <- function(id){
-  moduleServer(id, function(input, output, session){
+mod_00_header_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
   })
 }

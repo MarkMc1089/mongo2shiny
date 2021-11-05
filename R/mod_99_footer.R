@@ -52,8 +52,8 @@ mod_99_footer_ui <- function(id) {
 #' 99_footer Server Function
 #'
 #' @noRd
-mod_99_footer_server <- function(id){
-  moduleServer(id, function(input, output, session){
+mod_99_footer_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
   })
 }

@@ -10,16 +10,15 @@
 mod_markdown_example_ui <- function(id) {
   ns <- NS(id)
   tagList(
-    #includeMarkdown("inst/app/www/mod_markdown_example.md")
-    includeMarkdown(system.file("app", "www", "mod_markdown_example.md", package="mongo2shiny"))
+    includeMarkdown(system.file("app", "www", "mod_markdown_example.md", package = "mongo2shiny"))
   )
 }
 
 #' markdown_example Server Function
 #'
 #' @noRd
-mod_markdown_example_server <- function(id){
-  moduleServer(id, function(input, output, session){
+mod_markdown_example_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
   })
 }

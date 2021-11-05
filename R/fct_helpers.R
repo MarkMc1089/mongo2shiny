@@ -34,16 +34,14 @@
 #'   "my_collection", "my_db",
 #'   connection_string = paste0(
 #'     "mongodb+srv://admin:admin@sandbox.abcd1",
-#'     ".mongodb.net/?tls=true&retryWrites=true&w=majority",
+#'     ".mongodb.net/?tls=true&retryWrites=true&w=majority"
+#'   ),
 #'   replace_with = my_dataframe
-#'   )
 #' )
 #' }
-get_mongo_collection <- function(
-  collection, db,
-  connection_string,
-  replace_with = NULL) {
-
+get_mongo_collection <- function(collection, db,
+                                 connection_string,
+                                 replace_with = NULL) {
   conn <- mongo(
     collection = collection,
     db = db,

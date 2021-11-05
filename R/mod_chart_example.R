@@ -28,8 +28,8 @@ mod_chart_example_ui <- function(id) {
 #' @noRd
 #'
 #' @importFrom graphics hist
-mod_chart_example_server <- function(id){
-  moduleServer(id, function(input, output, session){
+mod_chart_example_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
     output$chart <- highcharter::renderHighchart({

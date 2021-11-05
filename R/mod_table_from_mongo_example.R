@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_table_from_mongo_example_ui <- function(id){
+mod_table_from_mongo_example_ui <- function(id) {
   ns <- NS(id)
   tagList(
     DT::dataTableOutput(ns("table"))
@@ -18,8 +18,8 @@ mod_table_from_mongo_example_ui <- function(id){
 #'
 #' @noRd
 #' @importFrom utils head
-mod_table_from_mongo_example_server <- function(id){
-  moduleServer(id, function(input, output, session){
+mod_table_from_mongo_example_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
     output$table <- DT::renderDataTable({
