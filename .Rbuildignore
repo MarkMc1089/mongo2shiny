@@ -9,3 +9,5 @@ $run_dev.*
 ^app\.R$
 ^rsconnect$
 ^\.pre-commit-config\.yaml$
+^.lintr
+^.mongo-credentials

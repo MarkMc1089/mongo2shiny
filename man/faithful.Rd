@@ -12,14 +12,14 @@ A data frame with 272 observations on 2 numeric variables:
 }
 }
 \source{
-{Azzalini, A. and Bowman, A. W. (1990). A look at some data on the 
+{Azzalini, A. and Bowman, A. W. (1990). A look at some data on the
 Old Faithful geyser. Applied Statistics, 39, 357--365. 10.2307/2347385.}
 }
 \usage{
 faithful
 }
 \description{
-Waiting time between eruptions and the duration of the eruption 
+Waiting time between eruptions and the duration of the eruption
 for the Old Faithful geyser in Yellowstone National Park, Wyoming, USA.
 }
 \keyword{datasets}

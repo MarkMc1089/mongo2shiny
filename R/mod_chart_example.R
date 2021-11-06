@@ -30,8 +30,6 @@ mod_chart_example_ui <- function(id) {
 #' @importFrom graphics hist
 mod_chart_example_server <- function(id) {
   moduleServer(id, function(input, output, session) {
-    ns <- session$ns
-
     output$chart <- highcharter::renderHighchart({
 
       # Generate bins based on input$bins from ui.R
@@ -48,9 +46,3 @@ mod_chart_example_server <- function(id) {
     })
   })
 }
-
-## To be copied in the UI
-# mod_chart_example_ui("chart_example_1")
-
-## To be copied in the server
-# callModule(mod_chart_example_server, "chart_example_1")

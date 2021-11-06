@@ -8,7 +8,6 @@
 #'
 #' @importFrom shiny NS tagList
 mod_00_header_ui <- function(id) {
-  ns <- NS(id)
   tagList(
     fluidRow(
       style = "background-color: #005EB8; width: 100%",
@@ -34,12 +33,6 @@ mod_00_header_ui <- function(id) {
 #' @noRd
 mod_00_header_server <- function(id) {
   moduleServer(id, function(input, output, session) {
-    ns <- session$ns
+
   })
 }
-
-## To be copied in the UI
-# mod_00_header_ui("00_header_1")
-
-## To be copied in the server
-# callModule(mod_00_header, "00_header_1")

@@ -8,7 +8,6 @@
 #'
 #' @importFrom shiny NS tagList
 mod_99_footer_ui <- function(id) {
-  ns <- NS(id)
   tagList(
     fluidRow(
       style = "background-color: #005EB8; width: 100%; height: 3px"
@@ -54,12 +53,6 @@ mod_99_footer_ui <- function(id) {
 #' @noRd
 mod_99_footer_server <- function(id) {
   moduleServer(id, function(input, output, session) {
-    ns <- session$ns
+
   })
 }
-
-## To be copied in the UI
-# mod_99_footer_ui("99_footer_1")
-
-## To be copied in the server
-# callModule(mod_99_footer, "99_footer_1")

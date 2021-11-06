@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_table_from_mongo_example_ui <- function(id) {
+mod_table_from_mongo_ui <- function(id) {
   ns <- NS(id)
   tagList(
     DT::dataTableOutput(ns("table"))
@@ -18,25 +18,21 @@ mod_table_from_mongo_example_ui <- function(id) {
 #'
 #' @noRd
 #' @importFrom utils head
-mod_table_from_mongo_example_server <- function(id) {
+mod_table_from_mongo_server <- function(id) {
   moduleServer(id, function(input, output, session) {
-    ns <- session$ns
+    # File .mongo-credentials.example should be edited and renamed according to
+    # users own credentials
+    eval_lines(".mongo-credentials")
 
     output$table <- DT::renderDataTable({
       get_mongo_collection(
         "rocks", "readr_samples",
-        connection_string = paste0(
-          "mongodb+srv://admin:admin@sandbox.qyjv9",
-          ".mongodb.net/?tls=true&retryWrites=true&w=majority"
+        connection_string = glue::glue(
+          "mongodb+srv://{MONGO_USER}:{MONGO_PASS}@{MONGO_HOST}",
+          "/?tls=true&retryWrites=true&w=majority"
         )
       ) %>%
         utils::head()
     })
   })
 }
-
-## To be copied in the UI
-# mod_table_from_mongo_example_ui("table_from_mongo_example_ui_1")
-
-## To be copied in the server
-# mod_table_from_mongo_example_server("table_from_mongo_example_ui_1")

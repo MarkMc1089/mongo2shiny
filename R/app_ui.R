@@ -16,7 +16,7 @@ app_ui <- function(request) {
       br(),
       mod_chart_example_ui("chart_example_1"),
       br(),
-      mod_table_from_mongo_example_ui("table_example_1")
+      mod_table_from_mongo_ui("table_example_1")
     ),
     br(),
     mod_99_footer_ui("99_footer_1")

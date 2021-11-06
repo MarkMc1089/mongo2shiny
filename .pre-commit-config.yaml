@@ -3,17 +3,31 @@
 repos:
 -   repo: https://github.com/lorenzwalthert/precommit
     rev: v0.1.3.9133
-    hooks: 
+    hooks:
     -   id: style-files
-        args: [--style_pkg=styler, --style_fun=tidyverse_style]    
+        args: [--style_pkg=styler, --style_fun=tidyverse_style]
     -   id: roxygenize
+        additional_dependencies:
+        -    config
+        -    DT
+        -    glue
+        -    golem
+        -    highcharter
+        -    magrittr
+        -    markdown
+        -    mongolite
+        -    MarkMc1089/nhsbsaR
+        -    MarkMc1089/nhsrtheme
+        -    pkgload
+        -    rlang
+        -    shiny
     # codemeta must be above use-tidy-description when both are used
     # -   id: codemeta-description-updated
     -   id: use-tidy-description
     # -   id: spell-check
     #     exclude: >
     #       (?x)^(
-    #       data/.*| 
+    #       data/.*|
     #       (.*/|)\.Rprofile|
     #       (.*/|)\.Renviron|
     #       (.*/|)\.gitignore|
@@ -39,7 +53,7 @@ repos:
     -   id: deps-in-desc
 #-   repo: https://github.com/pre-commit/pre-commit-hooks
 #    rev: v4.0.1
-#    hooks: 
+#    hooks:
 #    -   id: check-added-large-files
 #        args: ['--maxkb=200']
 #    -   id: end-of-file-fixer

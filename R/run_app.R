@@ -7,6 +7,7 @@
 #' @export
 #' @importFrom shiny shinyApp
 #' @importFrom golem with_golem_options
+# Begin Exclude Linting
 run_app <- function(onStart = NULL,
                     options = list(),
                     enableBookmarking = NULL,
@@ -24,3 +25,4 @@ run_app <- function(onStart = NULL,
     golem_opts = list(...)
   )
 }
+# End Exclude Linting
