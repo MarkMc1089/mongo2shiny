@@ -22,9 +22,9 @@
 #' # Get the data in my_collection (in the my_db database)
 #' get_mongo_collection(
 #'   "my_collection", "my_db",
-#'   connection_string = glue(
+#'   connection_string = glue::glue(
 #'     "mongodb+srv://{MONGO_USER}:{MONGO_PASS}@{MONGO_HOST}",
-#'     ".mongodb.net/?tls=true&retryWrites=true&w=majority"
+#'     "/?tls=true&retryWrites=true&w=majority"
 #'   )
 #' )
 #'
@@ -32,9 +32,9 @@
 #' # my dataframe, then get that data
 #' get_mongo_collection(
 #'   "my_collection", "my_db",
-#'   connection_string = paste0(
-#'     "mongodb+srv://admin:admin@sandbox.abcd1",
-#'     ".mongodb.net/?tls=true&retryWrites=true&w=majority"
+#'   connection_string = glue::glue(
+#'     "mongodb+srv://{MONGO_USER}:{MONGO_PASS}@{MONGO_HOST}",
+#'     "/?tls=true&retryWrites=true&w=majority"
 #'   ),
 #'   replace_with = my_dataframe
 #' )

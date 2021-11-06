@@ -17,7 +17,6 @@ repos:
         -    markdown
         -    mongolite
         -    MarkMc1089/nhsbsaR
-        -    MarkMc1089/nhsrtheme
         -    pkgload
         -    rlang
         -    shiny
