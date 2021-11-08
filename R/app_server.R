@@ -9,6 +9,7 @@ app_server <- function(input, output, session) {
   mod_00_header_server("00_header_1")
   mod_markdown_example_server("markdown_example_1")
   mod_chart_example_server("chart_example_1")
-  mod_table_from_mongo_server("table_example_1")
+  mod_table_from_mongo_server("table_example_1", creds = ".mongo-credentials")
+  mod_table_from_mongo_server("table_example_2")
   mod_99_footer_server("99_footer_1")
 }

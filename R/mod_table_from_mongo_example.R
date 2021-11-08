@@ -18,11 +18,16 @@ mod_table_from_mongo_ui <- function(id) {
 #'
 #' @noRd
 #' @importFrom utils head
-mod_table_from_mongo_server <- function(id) {
+mod_table_from_mongo_server <- function(id, creds = NULL) {
   moduleServer(id, function(input, output, session) {
     # File .mongo-credentials.example should be edited and renamed according to
     # users own credentials
-    eval_lines(".mongo-credentials")
+    if (not_null(creds)) eval_lines(creds)
+    stopifnot(
+      exists("MONGO_USER"),
+      exists("MONGO_PASS"),
+      exists("MONGO_HOST")
+    )
 
     output$table <- DT::renderDataTable({
       get_mongo_collection(
